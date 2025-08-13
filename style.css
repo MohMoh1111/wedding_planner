@@ -218,6 +218,62 @@ body::before {
   font-size: 0.95rem;
   color: #555;
 }
+.services {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff0f5;
+  /* margin-top: 40px; */
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  /* color: #d6336c; */
+  color: #a91d3a;
+  margin-bottom: 40px;
+  text-shadow: rgba(0, 0, 0, 0.05);
+  font-family: "Great Vibes", cursive;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  padding: 15px 0;
+  font-size: 1.3rem;
+  color: #333;
+  background-color: #ffe4ec;
+  margin: 0;
+}
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
 /* footer  */
 .footer {
   background-color: #a91d3a;
@@ -387,7 +443,7 @@ ul li {
 
 .package-card.popular {
   border: 3px solid #d6336c;
-  background-color: #ffe6ef;
+  /* background-color: #ffe6ef; */
 }
 .about-us {
   padding: 80px 20px;
