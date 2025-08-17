@@ -14,17 +14,6 @@ body {
   font-family: "Great Vibes", cursive;
 }
 
-/* .search-box {
-      width: 150px;
-    }
-    .carousel-img {
-      height: 450px;
-      object-fit: cover;
-    }
-    .btn {
-      color: beige;
-    } */
-
 .bg-navbar {
   margin: 0;
   top: 0;
@@ -343,7 +332,7 @@ ul li {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
-  border-top: 1px solid #4caf50;
+  border-top: 1px solid #ffff;
   padding-top: 10px;
   color: #c8e6c9;
 }
@@ -363,6 +352,7 @@ ul li {
     margin: 0 8px;
   }
 }
+/* package  */
 .packages-section {
   background-color: #fff0f5;
   padding: 60px 20px;
@@ -445,6 +435,43 @@ ul li {
   border: 3px solid #d6336c;
   /* background-color: #ffe6ef; */
 }
+/* review  */
+.reviews {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fffafc; /* soft pink/white mood */
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  color: #c33f6b; /* romantic pink */
+  margin-bottom: 30px;
+  font-family: "Great Vibes", cursive;
+}
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.review-cards img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+.card h4 {
+  margin-top: 15px;
+  color: #a91d3a;
+}
+/* about us  */
 .about-us {
   padding: 80px 20px;
   background-color: #fff0f5; /* soft pink background */
@@ -539,12 +566,10 @@ ul li {
   transition: transform 0.3s ease;
 }
 
-/* Image Hover Zoom */
 .about-image img:hover {
   transform: scale(1.03);
 }
 
-/* Text Styling */
 .about-text h2 {
   font-size: 2.5rem;
   color: #a91d3a;
@@ -580,8 +605,8 @@ ul li {
   }
 }
 
+/* contact section */
 .contact-section {
-  /* background-image: url("https://images.pexels.com/photos/265882/pexels-photo-265882.jpeg"); */
   background-image: url(images/img22.jpg);
   background-size: cover;
   background-position: center;
@@ -589,14 +614,6 @@ ul li {
   padding: 100px 20px;
 }
 
-/* .contact-overlay {
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(4px);
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 .contact-overlay {
   /* background-color: rgba(231, 190, 229, 0.6); */
   backdrop-filter: blur(2px);
@@ -685,10 +702,6 @@ option {
   }
 }
 /* gallery section  */
-/* .gallery h2 {
-  text-align: center;
-  color: #d63384;
-    margin-bottom: 30px; }*/
 
 .gallery {
   margin-top: 100px;
