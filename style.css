@@ -44,6 +44,7 @@ body {
   transition: color 0.3s ease;
   font-family: "Great Vibes", cursive;
 }
+
 .nav-item a:hover {
   color: #a72380;
   border-bottom: 2px solid #fff;
@@ -439,7 +440,7 @@ ul li {
 .reviews {
   text-align: center;
   padding: 60px 20px;
-  background-color: #fffafc; /* soft pink/white mood */
+  background-color: #fffafc;
 }
 
 .reviews h2 {

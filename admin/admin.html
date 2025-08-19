@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wedding Planner • Admin Dashboard (No JS)</title>
+    <!-- Bootstrap 5 CSS (no JS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons (optional, pure CSS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <!-- mobile toggle -->
+    <input type="checkbox" id="menu-toggle" />
+
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="brand"><span class="dot"></span> Wedding Planner</div>
+          <label
+            for="menu-toggle"
+            class="btn btn-sm btn-outline-secondary d-lg-none"
+            ><i class="bi bi-x-lg"></i
+          ></label>
+        </div>
+
+        <nav class="menu">
+          <a class="active" href="#"
+            ><i class="bi bi-speedometer2"></i> Dashboard</a
+          >
+          <a href="#"
+            ><i class="bi bi-people"></i> Clients
+            <span class="badge rounded-pill">12</span></a
+          >
+          <a href="#"><i class="bi bi-calendar2-heart"></i> Bookings</a>
+          <a href="#"><i class="bi bi-chat-dots"></i> Inquiries</a>
+          <a href="#"><i class="bi bi-card-checklist"></i> Tasks</a>
+          <a href="#"><i class="bi bi-building"></i> Vendors</a>
+          <a href="#"><i class="bi bi-gear"></i> Settings</a>
+        </nav>
+
+        <div
+          class="mt-3 p-3 rounded-3"
+          style="
+            background: linear-gradient(180deg, #fff7fa, #ffeaf1);
+            border: 1px solid #ffd6e2;
+          "
+        >
+          <div class="fw-semibold mb-1">Today’s Tip</div>
+          <div class="small text-secondary">
+            Confirm venue layout &amp; final guest count one week before the
+            event.
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main>
+        <!-- Topbar -->
+        <div class="topbar">
+          <div class="container-fluid py-2">
+            <div class="d-flex align-items-center gap-2">
+              <label for="menu-toggle" class="sidebar-toggle d-lg-none">
+                <i class="bi bi-list"></i><span>Menu</span>
+              </label>
+              <div class="flex-grow-1">
+                <div class="search">
+                  <i class="bi bi-search"></i>
+                  <input
+                    type="text"
+                    placeholder="Search clients, bookings, vendors…"
+                    aria-label="Search"
+                  />
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 ms-2">
+                <i class="bi bi-bell fs-5 position-relative">
+                  <span
+                    class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle"
+                    style="top: 2px; left: 14px"
+                  ></span>
+                </i>
+                <div class="d-none d-sm-flex flex-column text-end">
+                  <span class="fw-semibold">Admin</span>
+                  <span class="small text-secondary">Lovely dreams</span>
+                </div>
+                <span class="avatar">LD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrim d-lg-none"></div>
+
+        <!-- Content -->
+        <div class="container-fluid py-4">
+          <!-- KPIs -->
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="kpi-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="kpi-icon">
+                      <i class="bi bi-calendar2-heart"></i>
+                    </div>
+                    <div>
+                      <div class="small text-secondary">
+                        Bookings (This Month)
+                      </div>
+                      <div class="fs-4 fw-bold">24</div>
+                    </div>
+                  </div>
+                  <div class="trend-up">
+                    <i class="bi bi-arrow-up-right"></i> 12%
+                  </div>
+                </div>
+                <div class="mt-3 bar"><i style="width: 72%"></i></div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="kpi-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="kpi-icon"><i class="bi bi-chat-dots"></i></div>
+                    <div>
+                      <div class="small text-secondary">New Inquiries</div>
+                      <div class="fs-4 fw-bold">38</div>
+                    </div>
+                  </div>
+                  <div class="trend-up">
+                    <i class="bi bi-arrow-up-right"></i> 8%
+                  </div>
+                </div>
+                <div class="mt-3 bar"><i style="width: 60%"></i></div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="kpi-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="kpi-icon">
+                      <i class="bi bi-card-checklist"></i>
+                    </div>
+                    <div>
+                      <div class="small text-secondary">Open Tasks</div>
+                      <div class="fs-4 fw-bold">17</div>
+                    </div>
+                  </div>
+                  <div class="text-secondary">
+                    <i class="bi bi-dash-lg"></i>
+                  </div>
+                </div>
+                <div class="mt-3 bar"><i style="width: 40%"></i></div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="kpi-card">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="kpi-icon"><i class="bi bi-cash-stack"></i></div>
+                    <div>
+                      <div class="small text-secondary">Revenue (MMK)</div>
+                      <div class="fs-4 fw-bold">12.4M</div>
+                    </div>
+                  </div>
+                  <div class="trend-down">
+                    <i class="bi bi-arrow-down-right"></i> 3%
+                  </div>
+                </div>
+                <div class="mt-3 bar"><i style="width: 52%"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts + Tasks -->
+          <div class="row g-3 mt-1">
+            <div class="col-12 col-xl-8">
+              <div class="card-soft">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="mb-0">Bookings Trend (Last 6 Months)</h5>
+                  <span class="subtle">SVG (No JS)</span>
+                </div>
+                <div class="mt-2 chart-wrap">
+                  <!-- Simple SVG line chart (static sample) -->
+                  <svg
+                    viewBox="0 0 600 220"
+                    width="100%"
+                    height="220"
+                    role="img"
+                    aria-label="Bookings trend"
+                  >
+                    <defs>
+                      <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                        <stop
+                          offset="0%"
+                          stop-color="#ff6c99"
+                          stop-opacity="0.25"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#a91d3a"
+                          stop-opacity="0.05"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <!-- axes -->
+                    <line x1="40" y1="180" x2="580" y2="180" stroke="#e8eaef" />
+                    <line x1="40" y1="20" x2="40" y2="180" stroke="#e8eaef" />
+                    <!-- area -->
+                    <path
+                      d="M40,160 L120,140 L200,150 L280,120 L360,100 L440,130 L520,90 L520,180 L40,180 Z"
+                      fill="url(#g1)"
+                    />
+                    <!-- line -->
+                    <polyline
+                      points="40,160 120,140 200,150 280,120 360,100 440,130 520,90"
+                      fill="none"
+                      stroke="#a91d3a"
+                      stroke-width="3"
+                    />
+                    <!-- dots -->
+                    <g fill="#a91d3a" stroke="#fff" stroke-width="2">
+                      <circle cx="40" cy="160" r="5" />
+                      <circle cx="120" cy="140" r="5" />
+                      <circle cx="200" cy="150" r="5" />
+                      <circle cx="280" cy="120" r="5" />
+                      <circle cx="360" cy="100" r="5" />
+                      <circle cx="440" cy="130" r="5" />
+                      <circle cx="520" cy="90" r="5" />
+                    </g>
+                    <!-- labels -->
+                    <g font-size="11" fill="#6b7280">
+                      <text x="35" y="198">F</text>
+                      <text x="115" y="198">M</text>
+                      <text x="195" y="198">A</text>
+                      <text x="275" y="198">M</text>
+                      <text x="355" y="198">J</text>
+                      <text x="435" y="198">J</text>
+                      <text x="515" y="198">A</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-xl-4">
+              <div class="card-soft h-100">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="mb-0">Priority Tasks</h5>
+                  <span class="subtle">Today</span>
+                </div>
+                <ul class="list-group list-group-flush mt-2">
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="bi bi-square text-secondary me-2"></i> Confirm
+                      florist mood board
+                    </div>
+                    <span class="badge rounded-pill text-bg-light"
+                      >Due 3 PM</span
+                    >
+                  </li>
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="bi bi-check2-square text-success me-2"></i> Send
+                      venue contract
+                    </div>
+                    <span class="badge rounded-pill text-bg-success">Done</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="bi bi-square text-secondary me-2"></i> Shortlist
+                      photographers
+                    </div>
+                    <span class="badge rounded-pill text-bg-warning"
+                      >Pending</span
+                    >
+                  </li>
+                </ul>
+                <div class="mt-3 small text-secondary">
+                  Tip: Break tasks into tiny checkable steps.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table + Vendors + Calendar -->
+          <div class="row g-3 mt-1">
+            <div class="col-12 col-lg-7">
+              <div class="card-soft">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h5 class="mb-0">Recent Clients</h5>
+                  <a href="#" class="small text-decoration-none">View all</a>
+                </div>
+                <div class="table-responsive mt-2">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th>Client</th>
+                        <th>Event Date</th>
+                        <th>Package</th>
+                        <th>Status</th>
+                        <th class="text-end">Budget (MMK)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Aung &amp; Su</strong>
+                          <div class="small text-secondary">Yangon</div>
+                        </td>
+                        <td>2025-09-12</td>
+                        <td>Signature</td>
+                        <td>
+                          <span class="badge rounded-pill text-bg-info"
+                            >Planning</span
+                          >
+                        </td>
+                        <td class="text-end">5,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Min &amp; May</strong>
+                          <div class="small text-secondary">Mandalay</div>
+                        </td>
+                        <td>2025-10-03</td>
+                        <td>Essential</td>
+                        <td>
+                          <span class="badge rounded-pill text-bg-success"
+                            >Confirmed</span
+                          >
+                        </td>
+                        <td class="text-end">3,400,000</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Htet &amp; Khin</strong>
+                          <div class="small text-secondary">Taunggyi</div>
+                        </td>
+                        <td>2025-08-29</td>
+                        <td>Premium</td>
+                        <td>
+                          <span class="badge rounded-pill text-bg-warning"
+                            >Pending</span
+                          >
+                        </td>
+                        <td class="text-end">7,200,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="card-soft h-100">
+                <h5 class="mb-2">Top Vendors</h5>
+                <div class="d-grid gap-2">
+                  <div
+                    class="p-3 rounded-3 border"
+                    style="border-color: #ffe0ea; background: #fff7fa"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="fw-semibold">Blossom Florals</div>
+                        <div class="small text-secondary">Florist • 4.8/5</div>
+                      </div>
+                      <div class="text-end" style="min-width: 140px">
+                        <div class="small mb-1">Reliability</div>
+                        <div class="bar"><i style="width: 92%"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-3 border">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="fw-semibold">Golden Lens Studio</div>
+                        <div class="small text-secondary">
+                          Photography • 4.6/5
+                        </div>
+                      </div>
+                      <div class="text-end" style="min-width: 140px">
+                        <div class="small mb-1">Reliability</div>
+                        <div class="bar"><i style="width: 86%"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 rounded-3 border">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <div class="fw-semibold">Starry Night Venue</div>
+                        <div class="small text-secondary">Venue • 4.7/5</div>
+                      </div>
+                      <div class="text-end" style="min-width: 140px">
+                        <div class="small mb-1">Reliability</div>
+                        <div class="bar"><i style="width: 89%"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-3" />
+                <h6 class="mb-2">Mini Calendar</h6>
+                <div class="border rounded-3 p-3">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <div class="fw-semibold">August 2025</div>
+                    <div class="text-secondary small">Mon–Sun</div>
+                  </div>
+                  <div class="row row-cols-7 g-1 text-center small">
+                    <div class="col text-secondary">28</div>
+                    <div class="col text-secondary">29</div>
+                    <div class="col text-secondary">30</div>
+                    <div class="col text-secondary">31</div>
+                    <div class="col">1</div>
+                    <div class="col">2</div>
+                    <div class="col">3</div>
+                    <div class="col">4</div>
+                    <div class="col">5</div>
+                    <div class="col bg-warning rounded-2">6</div>
+                    <div class="col">7</div>
+                    <div class="col">8</div>
+                    <div class="col">9</div>
+                    <div class="col">10</div>
+                    <div class="col">11</div>
+                    <div class="col">12</div>
+                    <div class="col">13</div>
+                    <div class="col">14</div>
+                    <div class="col bg-info rounded-2">15</div>
+                    <div class="col">16</div>
+                    <div class="col">17</div>
+                    <div class="col">18</div>
+                    <div class="col">19</div>
+                    <div class="col">20</div>
+                    <div class="col">21</div>
+                    <div class="col">22</div>
+                    <div class="col">23</div>
+                    <div class="col">24</div>
+                    <div class="col">25</div>
+                    <div class="col bg-danger text-white rounded-2">26</div>
+                    <div class="col">27</div>
+                    <div class="col">28</div>
+                    <div class="col">29</div>
+                    <div class="col">30</div>
+                    <div class="col">31</div>
+                  </div>
+                  <div class="small mt-2">
+                    <span class="badge text-bg-warning">Vendor meet</span>
+                    <span class="badge text-bg-info">Rehearsal</span>
+                    <span class="badge text-bg-danger">Wedding Day</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="row g-3 mt-1">
+            <div class="col-12">
+              <div class="card-soft">
+                <h5 class="mb-2">Quick Notes</h5>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      placeholder="Write notes… "
+                    ></textarea>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div
+                      class="p-3 rounded-3"
+                      style="background: #fff7fa; border: 1px solid #ffd6e2"
+                    >
+                      <div class="fw-semibold mb-1">Branding</div>
+                      <div class="small text-secondary">
+                        Change theme color by editing <code>--brand</code> in
+                        <code>:root</code>. Buttons/accents update
+                        automatically.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /container -->
+      </main>
+    </div>
+    <!-- footer section  -->
+    <footer class="text-center py-4 text-muted">
+      <p>&copy; <span id="year"></span> Lovely Dreams.</p>
+    </footer>
+  </body>
+</html>
